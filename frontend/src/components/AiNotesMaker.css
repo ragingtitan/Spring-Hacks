@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  background-color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; 
+}
+#root,html,body{
+    color: white;
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica, Apple Color Emoji, Arial, Segoe UI Emoji, Segoe UI Symbol;
+    font-variation-settings: normal;
+    line-height: 1.5;
+    tab-size: 4;
+}
+.open-model-bar{
+    width: 2rem;
+    height: 2rem;
+}
+
+body,.body{
+    width: 100%;
+    background-color: #212121;
+}
+.prompt-essentials {
+    background-color: #212121;
+    width: 65%;
+   
+  }
+.prompt-input{
+  border: 2px solid white;
+}
+
+.dropdown-selection{
+    border: 1px solid white;
+    user-select: none;
+    background-color: rgb(63 63 63);
+}
+.model-selection:hover,.newchat:hover{
+    background-color: rgb(63 63 63);
+    
+}
+/* 
+.response-body{
+    width:65%;
+} */
+
+#prompt{
+
+    overflow: auto !important;
+}
+.copy-btn{
+    border-radius: 50%;
+    height: 30px !important;
+}
+/*animation*/
+.cursor{
+    display: block;
+    margin-left: 1px;
+    width: 2px;
+    height: 40px;
+    background-color: white;
+    animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+#type{
+    height: fit-content;
+    font-size: 40px;
+}
+.animation{
+    height: 55px;
+}
+.img-logo img{
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    z-index: 10000;
+  }
+body::-webkit-scrollbar-thumb:hover{
+    cursor: pointer !important;
+    z-index: 10000;
+  }
+  body::-webkit-scrollbar-thumb{
+    z-index: 10000;
+  }
+  /* Style the scrollbar thumb */
+  body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+    z-index: 10000;
+  }
+  
+  /* Style the scrollbar track */
+  body::-webkit-scrollbar-track {
+    background-color: #212121; /* Color of the scrollbar track */
+    z-index: 10000;
+    border-radius: 5px;
+  }
+  /*new*/
+  .prompt-input #prompt::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    z-index: 10000;
+  }
+  .prompt-input #prompt::-webkit-scrollbar-thumb:hover{
+    cursor: pointer !important;
+    z-index: 10000;
+  }
+  .prompt-input #prompt::-webkit-scrollbar-thumb{
+    border-radius: 0.75rem;
+    z-index: 10000;
+  }
+  /* Style the scrollbar thumb */
+  .prompt-input #prompt::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 0.75rem; /* Rounded corners for the scrollbar thumb */
+    z-index: 10000;
+  }
+  
+  /* Style the scrollbar track */
+  .prompt-input #prompt::-webkit-scrollbar-track {
+    background-color: #212121; /* Color of the scrollbar track */
+    z-index: 10000;
+    border-radius: 0.75rem;
+  }
+  .disabled-btn {
+    opacity: 0.5; /* Reduce opacity to make it appear disabled */
+    cursor: not-allowed; /* Change cursor to indicate non-interactivity */
+    pointer-events: none; /* Disable pointer events to prevent interaction */
+    /* Optionally, add other styles to visually indicate disabled state */
+}
+/*.summary{
+    height: 100px;
+    min-width: 80%;
+    width: 100%;
+    transition: all 0.3s;
+}*/
+.summary-wrapper{
+  min-width: 80%;
+  width: 100%;
+}
+.summary-wrapper:hover {
+  background-color: rgba(47, 47, 47, 0.8);
+}
+.sidebar-content::-webkit-scrollbar {
+  background-color: black !important;
+    width: 5px; /* Width of the scrollbar */
+  }
+  /* Style the scrollbar thumb */
+  .sidebar-content::-webkit-scrollbar-thumb:hover {
+    /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+    opacity: 0.85;
+  }
+  
+  /* Style the scrollbar track */
+  .sidebar-content::-webkit-scrollbar-track {
+    background-color: #171717; /* Color of the scrollbar track */
+    border-radius: 5px;
+  }
+  
+  .sidebar-newchat{
+    background-color: #171717;
+  }
+  .sidebar-newchat:hover{
+    background-color: rgba(47, 47, 47, 0.8);
+  }
+  /*Loading btn animation*/
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px; /* Half of the spinner's height */
+    margin-left: -8px; /* Half of the spinner's width */
+    border: 2px solid black;
+    border-top-color: white; /* Use the color of the parent element */
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite; /* Rotate the spinner */
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg); /* Rotate the spinner 360 degrees */
+    }
+  }
+  .active{
+    background-color: rgb(63 63 63);
+  }
+.cross img:hover{
+  /* border: 1px solid white; */
+  transform: scale(1.02);
+  
+}
+@keyframes buttonAnim {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(7px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+  .copy-msg button{
+    z-index: 1000;
+  }
+  .copy-msg:hover{
+    color: #1e1e1e;
+    font-weight: 600;
+  }
+  .scroll-down-btn{
+    background-color: #1e1e1e;
+    border: 1px solid white;
+    left: 49%;
+    opacity: 0.7;
+  }
+  .scroll-down-btn:hover{
+    opacity: 1;
+  }
+
+.dark-body{
+  background-color: #f1f1f1;
+  color: black !important;
+  color-scheme: white;
+}
+.dark-body .navbar nav ul li div .buttons-wrapper .newchat{
+ border: 1px solid black !important;
+}
+.dark-sidebar-content{
+  background-color: #f1f1f1;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+.dark-cross svg path{
+  fill: black !important;
+}
+.dark-toggle-sidebar svg path{
+  fill: black !important;
+}
+.dark-prompt{
+  color: black !important;
+}
+.dark-prompt-essentials{
+  background-color: #f1f1f1;
+  border: 1px solid black !important;
+}
+.dark-prompt-essentials .prompt-input textarea::placeholder{
+  color: black !important;
+}
+.dark-send-prompt-btn {
+  background-color: black !important;
+  color: white !important;
+}
+.dark-send-prompt-btn span svg path{
+  color: white !important;
+}
+.dark-dark-mode-btn{
+  background-color: rgb(63 63 63) !important;
+  color: white!important;
+}
+.dark-dark-mode-btn #toggle{
+  background-color: white !important;
+  color: rgb(63 63 63);
+}
+.dark-scroll{
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  opacity: 0.4;
+}
+.dark-scroll svg path{
+  stroke: black;
+}
+#interaction-container:last-child{
+  margin-bottom: 5px !important;
+}
+#interaction-container{
+  height: 85%;
+  padding-bottom:64px;
+}
+.close-sidebar{
+  animation:buttonAnim forwards 4s linear infinite;
+}
+#type{
+  background-image: linear-gradient(to right, 
+  #4285f4, #9b72cb, #d96570, #9b72cb, #4285f4, #d96570);  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 5s linear infinite;
+  height: 50px;
+}
+
+/* Animation for continuous color change */
+@keyframes rainbow {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  100% { 
+    background-position: 100% 50%; 
+  }
+}
+.cursor-dark{
+  background-color: black !important;
+}
+
+.code-block{
+  width: 27rem !important;
+}
+.code-block-wrapper{
+  overflow-x: scroll;
+  width: 100% !important;
+}
+.message pre::-webkit-scrollbar {
+  height: 10px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+.message pre::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 1rem; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Style the scrollbar track */
+.message pre::-webkit-scrollbar-track {
+  background-color: rgba(13,13,13,1);; /* Color of the scrollbar track */
+}
+.message pre::-webkit-scrollbar-track:hover {
+  cursor: pointer;
+}
+.message pre{
+  width:100% !important;
+  border-radius: 0.85rem !important;
+  margin: 10px 0px;
+}
+.message pre code{
+  background-color: rgba(13,13,13,1);
+  padding: 1.3rem;
+  width: 100% !important;
+  border-radius: 0.85rem !important;
+}
+.message pre code ul{
+ list-style: none; 
+}
+.message pre code li{
+  list-style: none;
+}
+
+.message p{
+  margin: 1.1rem 0px;
+}
+.message ul{
+  margin: 1.25rem 0px;
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.message ol{
+  margin: 1.25rem 0px;
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.message ul ul {
+  list-style:disc;
+  padding-left: 10px;
+}
+.message ul ul li{
+  margin: 5px 0px;
+}
+.message ul li::marker{
+  padding-right: 5px;
+ }
+.message p strong{
+  font-size: 1.2rem;
+  margin: 10px 0px;
+  font-weight: 500;
+}
+.message ul li p strong{
+  font-size: 1.2rem;
+  margin: 10px 0px;
+  font-weight: 600;
+}
+.message ul li strong{
+  font-size: 1.1rem;
+  margin: 10px 0px;
+  font-weight: 600;
+}
+.message a{
+  text-decoration: none;
+  color: #4285f4;
+}
+.message a:hover{
+  text-decoration: underline;
+  color: #4285f4;
+}
+.message table thead{
+  margin: 20px 0px;
+}
+footer{
+  background-color: #212121;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+.large-text-area{
+  height: 80%;
+  width: 80%;
+  position: fixed;
+  top: 10%;
+  background-color: #212121;
+  border: 1px solid white;
+
+}
+/* Dropdown CSS */
+.dropdown {
+position: fixed !important;
+  background-color: #2f2f2f !important;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 50000000000000000; /* Ensure it appears above other elements */
+}
+
+.dropdown a {
+  display: block;
+  color: white !important;
+  
+  color: #333; /* Dark text color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.dropdown a:hover {
+  
+ background-color: #333;
+}
+
+
+.sidebar-content::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+  z-index: 10000;
+}
+.sidebar-content::-webkit-scrollbar-thumb:hover{
+  cursor: pointer !important;
+  z-index: 10000;
+}
+.sidebar-content::-webkit-scrollbar-thumb{
+  z-index: 10000;
+}
+/* Style the scrollbar thumb */
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  z-index: 10000;
+}
+
+/* Style the scrollbar track */
+.sidebar-content::-webkit-scrollbar-track {
+  background-color:#171717; /* Color of the scrollbar track */
+  z-index: 10000;
+  border-radius: 5px;
+}
+/* vs-code-dark.css */
+.hljs {
+  background: none; /* VS Code Dark Background */
+  color: white; /* Default Text Color */
+}
+/* Custom Scrollbar Styles for Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background: #2d2d2d; /* Track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444; /* Scrollbar thumb background */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Hover color for the scrollbar thumb */
+}
+
+.prompt-code{
+  font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica, Apple Color Emoji, Arial, Segoe UI Emoji, Segoe UI Symbol;
+  font-variation-settings: normal;
+  color: white;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    width: fit-content;
+}
+.code-block {
+  white-space: pre-wrap; /* Wrap code lines */
+  word-wrap: break-word; /* Break long words */
+  overflow-x: auto; /* Enable horizontal scrolling for long code lines */
+   /* Light grey background */
+  padding: 10px; /* Some padding around the code */
+  border-radius: 4px; /* Rounded corners */
+  
+  font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica, Apple Color Emoji, Arial, Segoe UI Emoji, Segoe UI Symbol;
+  font-variation-settings: normal;
+  color: white;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    width: fit-content;
+}
+.code-block .hljs{
+  color: white !important;;
+}
+.normal-text {
+ 
+}
